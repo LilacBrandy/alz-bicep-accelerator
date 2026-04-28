@@ -1,5 +1,5 @@
 ## Decision 5: Platform Landing Zone Azure Regions
-starter_locations: ["<region-1>", "<region-2>"]
+starter_locations: ["australiaeast", "australiasoutheast"]
 
 # Management Groups
 
