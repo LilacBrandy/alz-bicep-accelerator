@@ -32,5 +32,5 @@ param landingZonesOnlineConfig = {
 // Currently no policy assignments for online landing zones
 // When policies are added, specify parameter overrides here
 param parPolicyAssignmentParameterOverrides = {
-  // No policy assignments in landing zones - online currently
+  // No policy assignments in platform-security currently
 }
