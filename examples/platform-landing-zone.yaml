@@ -58,4 +58,4 @@ resource_group_private_dns_resolver_name_prefix: "rg-alz-dnspr"
 # Choose the network architecture for the Platform Landing Zone
 # Valid options are "hubNetworking", "vwanConnectivity", or "none"
 
-network_type: "hubNetworking"
+network_type: "none"
