@@ -82,7 +82,7 @@ param hubNetworks = [
       skuName: 'Standard'
     }
     vpnGatewaySettings: {
-      deployVpnGateway: false
+      deployVpnGateway: true
       name: 'vgw-alz-${parLocations[0]}'
       skuName: 'VpnGw1AZ'
       vpnMode: 'activeActiveBgp'
@@ -90,17 +90,17 @@ param hubNetworks = [
       asn: 65515
     }
     expressRouteGatewaySettings: {
-      deployExpressRouteGateway: false
+      deployExpressRouteGateway: true
       name: 'ergw-alz-${parLocations[0]}'
     }
     privateDnsSettings: {
-      deployPrivateDnsZones: false
-      deployDnsPrivateResolver: false
+      deployPrivateDnsZones: true
+      deployDnsPrivateResolver: true
       privateDnsResolverName: 'dnspr-alz-${parLocations[0]}'
       privateDnsZones: []
     }
     ddosProtectionPlanSettings: {
-      deployDdosProtectionPlan: false
+      deployDdosProtectionPlan: true
       name: 'ddos-alz-${parLocations[0]}'
     }
   }
@@ -110,7 +110,7 @@ param hubNetworks = [
     addressPrefixes: [
       '10.1.0.0/22'
     ]
-    deployPeering: false
+    deployPeering: true
     dnsServers: []
     peeringSettings: [
       {
@@ -150,7 +150,7 @@ param hubNetworks = [
       }
     ]
     azureFirewallSettings: {
-      deployAzureFirewall: false
+      deployAzureFirewall: true
       azureFirewallName: 'afw-alz-${parLocations[1]}'
       azureSkuTier: 'Standard'
       publicIPAddressObject: {
@@ -161,12 +161,12 @@ param hubNetworks = [
       }
     }
     bastionHostSettings: {
-      deployBastion: false
+      deployBastion: true
       bastionHostSettingsName: 'bas-alz-${parLocations[1]}'
       skuName: 'Standard'
     }
     vpnGatewaySettings: {
-      deployVpnGateway: false
+      deployVpnGateway: true
       name: 'vgw-alz-${parLocations[1]}'
       skuName: 'VpnGw1AZ'
       vpnMode: 'activeActiveBgp'
@@ -174,12 +174,12 @@ param hubNetworks = [
       asn: 65515
     }
     expressRouteGatewaySettings: {
-      deployExpressRouteGateway: false
+      deployExpressRouteGateway: true
       name: 'ergw-alz-${parLocations[1]}'
     }
     privateDnsSettings: {
-      deployPrivateDnsZones: false
-      deployDnsPrivateResolver: false
+      deployPrivateDnsZones: true
+      deployDnsPrivateResolver: true
       privateDnsResolverName: 'dnspr-alz-${parLocations[1]}'
       privateDnsZones: [
         'privatelink.{regionName}.azurecontainerapps.io'
