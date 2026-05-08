@@ -13,7 +13,61 @@ param landingZonesConfig = {
   managementGroupParentId: '{{management_group_id_prefix}}{{management_group_int_root_id||alz}}{{management_group_id_postfix}}'
   managementGroupIntermediateRootName: '{{management_group_id_prefix}}{{management_group_int_root_id||alz}}{{management_group_id_postfix}}'
   managementGroupDisplayName: '{{management_group_name_prefix}}{{management_group_landing_zones_name||Landing Zones}}{{management_group_name_postfix}}'
-  managementGroupDoNotEnforcePolicyAssignments: []
+  managementGroupDoNotEnforcePolicyAssignments: [
+    'Audit-AppGW-WAF'
+    'Deny-IP-forwarding'
+    'Deny-MgmtPorts-Internet'
+    'Deny-Priv-Esc-AKS'
+    'Deny-Privileged-AKS'
+    'Deny-Storage-http'
+    'Deny-Subnet-Without-Nsg'
+    'Deploy-AzSqlDb-Auditing'
+    'Deploy-GuestAttest'
+    'Deploy-MDFC-DefSQL-AMA'
+    'Deploy-SQL-TDE'
+    'Deploy-SQL-Threat'
+    'Deploy-VM-Backup'
+    'Deploy-VM-ChangeTrack'
+    'Deploy-VM-Monitoring'
+    'Deploy-vmArc-ChangeTrack'
+    'Deploy-vmHybr-Monitoring'
+    'Deploy-VMSS-ChangeTrack'
+    'Deploy-VMSS-Monitoring'
+    'Enable-AUM-CheckUpdates'
+    'Enable-DDoS-VNET'
+    'Enforce-AKS-HTTPS'
+    'Enforce-ASR'
+    'Enforce-Encrypt-CMK0'
+    'Enforce-GR-APIM0'
+    'Enforce-GR-AppServices0'
+    'Enforce-GR-Automation0'
+    'Enforce-GR-BotService0'
+    'Enforce-GR-CogServ0'
+    'Enforce-GR-Compute0'
+    'Enforce-GR-ContApps0'
+    'Enforce-GR-ContInst0'
+    'Enforce-GR-ContReg0'
+    'Enforce-GR-CosmosDb0'
+    'Enforce-GR-DataExpl0'
+    'Enforce-GR-DataFactory0'
+    'Enforce-GR-EventGrid0'
+    'Enforce-GR-EventHub0'
+    'Enforce-GR-KeyVault'
+    'Enforce-GR-KeyVaultSup0'
+    'Enforce-GR-Kubernetes0'
+    'Enforce-GR-MachLearn0'
+    'Enforce-GR-MySQL0'
+    'Enforce-GR-Network0'
+    'Enforce-GR-OpenAI0'
+    'Enforce-GR-PostgreSQL0'
+    'Enforce-GR-ServiceBus0'
+    'Enforce-GR-SQL0'
+    'Enforce-GR-Storage0'
+    'Enforce-GR-Synapse0'
+    'Enforce-GR-VirtualDesk0'
+    'Enforce-Subnet-Private'
+    'Enforce-TLS-SSL-Q225'
+  ]
   managementGroupExcludedPolicyAssignments: []
   customerRbacRoleDefs: []
   customerRbacRoleAssignments: []
@@ -41,7 +95,7 @@ param parPolicyAssignmentParameterOverrides = {
   'Deploy-AzSqlDb-Auditing': {
     parameters: {
       logAnalyticsWorkspaceId: {
-        value: '/subscriptions/{{management_subscription_id}}/resourceGroups/{{resource_group_logging_name_prefix||rg-alz-logging}}-${parLocations[0]}/providers/Microsoft.OperationalInsights/workspaces/law-alz-${parLocations[0]}'
+        value: '/subscriptions/ba9523fd-7e33-43fd-9f88-8c1ed1dd2234/resourceGroups/dm-logicapp-rg/providers/Microsoft.OperationalInsights/workspaces/DM-Log-analytics'
       }
     }
   }
@@ -102,7 +156,7 @@ param parPolicyAssignmentParameterOverrides = {
   'Deploy-MDFC-DefSQL-AMA': {
     parameters: {
       userWorkspaceResourceId: {
-        value: '/subscriptions/{{management_subscription_id}}/resourceGroups/{{resource_group_logging_name_prefix||rg-alz-logging}}-${parLocations[0]}/providers/Microsoft.OperationalInsights/workspaces/law-alz-${parLocations[0]}'
+        value: '/subscriptions/ba9523fd-7e33-43fd-9f88-8c1ed1dd2234/resourceGroups/dm-logicapp-rg/providers/Microsoft.OperationalInsights/workspaces/DM-Log-analytics'
       }
       dcrResourceId: {
         value: '/subscriptions/{{management_subscription_id}}/resourceGroups/{{resource_group_logging_name_prefix||rg-alz-logging}}-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-mdfcsql-alz-${parLocations[0]}'

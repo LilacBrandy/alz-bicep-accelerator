@@ -13,7 +13,13 @@ param landingZonesCorpConfig = {
   managementGroupParentId: '{{management_group_id_prefix}}{{management_group_landing_zones_id||landingzones}}{{management_group_id_postfix}}'
   managementGroupIntermediateRootName: '{{management_group_id_prefix}}{{management_group_int_root_id||alz}}{{management_group_id_postfix}}'
   managementGroupDisplayName: '{{management_group_name_prefix}}{{management_group_corp_name||Corp}}{{management_group_name_postfix}}'
-  managementGroupDoNotEnforcePolicyAssignments: []
+  managementGroupDoNotEnforcePolicyAssignments: [
+    'Audit-PeDnsZones'
+    'Deny-HybridNetworking'
+    'Deny-Public-Endpoints'
+    'Deny-Public-IP-On-NIC'
+    'Deploy-Private-DNS-Zones'
+  ]
   managementGroupExcludedPolicyAssignments: []
   customerRbacRoleDefs: []
   customerRbacRoleAssignments: []

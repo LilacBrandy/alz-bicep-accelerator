@@ -13,14 +13,16 @@ param platformConnectivityConfig = {
   managementGroupParentId: '{{management_group_id_prefix}}{{management_group_platform_id||platform}}{{management_group_id_postfix}}'
   managementGroupIntermediateRootName: '{{management_group_id_prefix}}{{management_group_int_root_id||alz}}{{management_group_id_postfix}}'
   managementGroupDisplayName: '{{management_group_name_prefix}}{{management_group_connectivity_name||Connectivity}}{{management_group_name_postfix}}'
-  managementGroupDoNotEnforcePolicyAssignments: []
+  managementGroupDoNotEnforcePolicyAssignments: [
+    'Enable-DDoS-VNET'
+  ]
   managementGroupExcludedPolicyAssignments: []
   customerRbacRoleDefs: []
   customerRbacRoleAssignments: []
   customerPolicyDefs: []
   customerPolicySetDefs: []
   customerPolicyAssignments: []
-  subscriptionsToPlaceInManagementGroup: ['{{connectivity_subscription_id}}']
+  subscriptionsToPlaceInManagementGroup: []
   waitForConsistencyCounterBeforeCustomPolicyDefinitions: 10
   waitForConsistencyCounterBeforeCustomPolicySetDefinitions: 10
   waitForConsistencyCounterBeforeCustomRoleDefinitions: 10

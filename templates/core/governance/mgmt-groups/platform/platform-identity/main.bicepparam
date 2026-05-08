@@ -13,14 +13,19 @@ param platformIdentityConfig = {
   managementGroupParentId: '{{management_group_id_prefix}}{{management_group_platform_id||platform}}{{management_group_id_postfix}}'
   managementGroupIntermediateRootName: '{{management_group_id_prefix}}{{management_group_int_root_id||alz}}{{management_group_id_postfix}}'
   managementGroupDisplayName: '{{management_group_name_prefix}}{{management_group_identity_name||Identity}}{{management_group_name_postfix}}'
-  managementGroupDoNotEnforcePolicyAssignments: []
+  managementGroupDoNotEnforcePolicyAssignments: [
+    'Deny-MgmtPorts-Internet'
+    'Deny-Public-IP'
+    'Deny-Subnet-Without-Nsg'
+    'Deploy-VM-Backup'
+  ]
   managementGroupExcludedPolicyAssignments: []
   customerRbacRoleDefs: []
   customerRbacRoleAssignments: []
   customerPolicyDefs: []
   customerPolicySetDefs: []
   customerPolicyAssignments: []
-  subscriptionsToPlaceInManagementGroup: ['{{identity_subscription_id}}']
+  subscriptionsToPlaceInManagementGroup: []
   waitForConsistencyCounterBeforeCustomPolicyDefinitions: 10
   waitForConsistencyCounterBeforeCustomPolicySetDefinitions: 10
   waitForConsistencyCounterBeforeCustomRoleDefinitions: 10

@@ -15,10 +15,7 @@ root_parent_management_group_id: ""  # Leave empty to use Tenant Root Group
 
 ## Decision 7: Platform Subscriptions
 subscription_ids:
-  management: "<management-subscription-id>"
-  identity: "<identity-subscription-id>"
-  connectivity: "<connectivity-subscription-id>"
-  security: "<security-subscription-id>"
+  management: "ba9523fd-7e33-43fd-9f88-8c1ed1dd2234"
 
 ## Decision 8: Bootstrap Resource Subscription
 bootstrap_subscription_id: ""  # Leave empty to use the subscription connected to Azure CLI
