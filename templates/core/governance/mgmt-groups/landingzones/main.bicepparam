@@ -85,13 +85,7 @@ param landingZonesConfig = {
 
 // Only specify the parameters you want to override - others will use defaults from JSON files
 param parPolicyAssignmentParameterOverrides = {
-  'Enable-DDoS-VNET': {
-    parameters: {
-      ddosPlan: {
-        value: '/subscriptions/{{connectivity_subscription_id}}/resourceGroups/{{resource_group_hub_networking_name_prefix||rg-alz-conn}}-${parLocations[0]}/providers/Microsoft.Network/ddosProtectionPlans/ddos-alz-${parLocations[0]}'
-      }
-    }
-  }
+  // Enable-DDoS-VNET is omitted: no DDoS plan or connectivity subscription is being deployed.
   'Deploy-AzSqlDb-Auditing': {
     parameters: {
       logAnalyticsWorkspaceId: {
