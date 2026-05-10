@@ -4,22 +4,7 @@
 
 These changes configure the ALZ Bicep Accelerator to deploy **management groups and policies only**, pointing at an existing Log Analytics workspace, with all policies set to DoNotEnforce. No networking resources, no logging resources, and no subscription placements are deployed.
 
----
-
-## `examples/platform-landing-zone.yaml`
-
-- Renamed Corp landing zone: ID `corp` → `internal`, display name `Corp` → `Internal`
-- Renamed Online landing zone: ID `online` → `external`, display name `Online` → `External`
-- Set `network_type` to `none` to skip all networking deployments (hub networking and Virtual WAN)
-
----
-
-## `examples/bootstrap/inputs-azure-devops.yaml`
-## `examples/bootstrap/inputs-github.yaml`
-## `examples/bootstrap/inputs-local.yaml`
-
-- Set `subscription_ids.management` to `ba9523fd-7e33-43fd-9f88-8c1ed1dd2234` (the subscription containing the existing Log Analytics workspace)
-- Set `subscription_ids.identity`, `subscription_ids.connectivity`, and `subscription_ids.security` to empty strings — these subscriptions are not being used in this deployment
+> Note: Files under `examples/` are unchanged — they are reference examples only and do not affect deployments.
 
 ---
 

@@ -30,11 +30,11 @@ management_group_security_name: "Security"
 management_group_landing_zones_id: "landingzones"
 management_group_landing_zones_name: "Landing Zones"
 
-management_group_corp_id: "internal"
-management_group_corp_name: "Internal"
+management_group_corp_id: "corp"
+management_group_corp_name: "Corp"
 
-management_group_online_id: "external"
-management_group_online_name: "External"
+management_group_online_id: "online"
+management_group_online_name: "Online"
 
 management_group_local_id: "local"
 management_group_local_name: "Local"
@@ -61,4 +61,4 @@ resource_group_private_dns_resolver_name_prefix: "rg-alz-dnspr"
 # Choose the network architecture for the Platform Landing Zone
 # Valid options are "hubNetworking", "vwanConnectivity", or "none"
 
-network_type: "none"
+network_type: "hubNetworking"
